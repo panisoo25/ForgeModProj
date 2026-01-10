@@ -14,6 +14,8 @@ import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.paniso.examplemod.block.ModBlocks;
+import net.paniso.examplemod.item.ModCreativeModeTabs;
 import net.paniso.examplemod.item.Moditems;
 import org.slf4j.Logger;
 
@@ -33,7 +35,10 @@ public class ExampleMod
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
 
+        ModCreativeModeTabs.register(modEventBus);
+
         Moditems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
 
 
@@ -56,6 +61,12 @@ public class ExampleMod
         {
             event.accept(Moditems.REYTHERITE);
             event.accept(Moditems.RAW_REYTHERITE);
+        }
+
+        if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS)
+        {
+            event.accept(ModBlocks.REYTHERITE_BLOCK);
+            event.accept(ModBlocks.RAW_REYTHERITE_BLOCK);
         }
     }
 

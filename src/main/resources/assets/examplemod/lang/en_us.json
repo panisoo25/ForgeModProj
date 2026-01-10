@@ -1,4 +1,10 @@
 {
   "item.examplemod.reytherite": "Reytherite",
-  "item.examplemod.raw_reytherite": "Raw Reytherite"
+  "item.examplemod.raw_reytherite": "Raw Reytherite",
+
+  "block.examplemod.reytherite_block": "Block of Reytherite",
+  "block.examplemod.raw_reytherite_block": "Block of Raw Reytherite",
+
+  "creativetab.examplemod.reytherite_items": "Reytherite Items",
+  "creativetab.examplemod.reytherite_blocks": "Reytherite Blocks"
 }
