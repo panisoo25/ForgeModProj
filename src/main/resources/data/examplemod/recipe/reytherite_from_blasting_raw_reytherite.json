@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 100,
+  "group": "reytherite",
+  "ingredient":
+  {
+    "item": "examplemod:raw_reytherite"
+  },
+  "result":
+  {
+    "id": "examplemod:reytherite"
+  }
+}

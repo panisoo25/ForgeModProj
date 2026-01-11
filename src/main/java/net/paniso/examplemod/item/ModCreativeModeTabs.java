@@ -22,6 +22,7 @@ public class ModCreativeModeTabs {
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(Moditems.REYTHERITE.get());
                         output.accept(Moditems.RAW_REYTHERITE.get());
+                        output.accept(Moditems.MEVERITE.get());
                     })
 
                     .build());

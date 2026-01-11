@@ -14,7 +14,10 @@ public class Moditems {
     public static final RegistryObject<Item> REYTHERITE = ITEMS.register("reytherite",
             () -> new Item(new Item.Properties()));
 
-    public  static final RegistryObject<Item> RAW_REYTHERITE = ITEMS.register("raw_reytherite",
+    public static final RegistryObject<Item> RAW_REYTHERITE = ITEMS.register("raw_reytherite",
+            () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> MEVERITE = ITEMS.register("meverite",
             () -> new Item(new Item.Properties()));
 
     public static void register(IEventBus eventBus)

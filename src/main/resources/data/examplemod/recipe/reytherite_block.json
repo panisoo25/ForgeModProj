@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key":
+  {
+    "A":
+    {
+      "item": "examplemod:reytherite"
+    }
+  },
+  "pattern": [
+    "AAA",
+    "AAA",
+    "AAA"
+  ],
+  "result":
+  {
+    "count": 1,
+    "id": "examplemod:reytherite_block"
+  }
+
+}

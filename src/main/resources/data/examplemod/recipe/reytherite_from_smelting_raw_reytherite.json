@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "group": "reytherite",
+  "ingredient":
+  {
+    "item": "examplemod:raw_reytherite"
+  },
+  "result":
+  {
+    "id": "examplemod:reytherite"
+  }
+}
