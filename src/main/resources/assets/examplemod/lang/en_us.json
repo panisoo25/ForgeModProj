@@ -5,6 +5,10 @@
 
   "block.examplemod.reytherite_block": "Block of Reytherite",
   "block.examplemod.raw_reytherite_block": "Block of Raw Reytherite",
+  "block.examplemod.reytherite_deepslate_ore": "Deepslate Reytherite",
+  "block.examplemod.reytherite_ore": "Reytherite Ore ",
+
+  "item.examplemod.reystaff": "Reystaff",
 
   "creativetab.examplemod.reytherite_items": "Reytherite Items",
   "creativetab.examplemod.reytherite_blocks": "Reytherite Blocks"

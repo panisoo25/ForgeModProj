@@ -6,6 +6,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.paniso.examplemod.ExampleMod;
+import net.paniso.examplemod.item.custom.ReystaffItem;
 
 public class Moditems {
     public static final DeferredRegister<Item> ITEMS =
@@ -19,6 +20,11 @@ public class Moditems {
 
     public static final RegistryObject<Item> MEVERITE = ITEMS.register("meverite",
             () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> REYSTAFF =
+            ITEMS.register("reystaff",
+                    () -> new ReystaffItem(new Item.Properties().stacksTo(1)));
+
 
     public static void register(IEventBus eventBus)
     {
