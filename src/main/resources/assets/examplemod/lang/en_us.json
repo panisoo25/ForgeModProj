@@ -10,6 +10,9 @@
 
   "item.examplemod.reystaff": "Reystaff",
 
+  "item.examplemod.reyleg": "Leg of Rey",
+  "item.examplemod.cooked_reyleg": "Cooked Leg of Rey",
+
   "creativetab.examplemod.reytherite_items": "Reytherite Items",
   "creativetab.examplemod.reytherite_blocks": "Reytherite Blocks"
 }

@@ -62,6 +62,8 @@ public class ExampleMod
             event.accept(Moditems.REYTHERITE);
             event.accept(Moditems.RAW_REYTHERITE);
             event.accept(Moditems.MEVERITE);
+            event.accept(Moditems.REYLEG);
+            event.accept(Moditems.COOKED_REYLEG);
         }
 
         if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS)

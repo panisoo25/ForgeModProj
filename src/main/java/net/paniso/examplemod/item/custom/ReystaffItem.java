@@ -34,14 +34,11 @@ public class ReystaffItem extends Item {
             if (wolf != null) {
                 wolf.moveTo(player.getX(), player.getY(), player.getZ(), 0.0F, 0.0F);
 
-                // Tame + owner
                 wolf.tame(player);
                 wolf.setOwnerUUID(player.getUUID());
 
-                // 🎨 RANDOM COLLAR COLOR (reflection)
                 setWolfCollarColor(wolf, DyeColor.values()[random.nextInt(DyeColor.values().length)]);
 
-                // 🎲 1 in 67 Dinnerbone
                 if (random.nextInt(67) == 0) {
                     wolf.setCustomName(Component.literal("Dinnerbone"));
                 } else {
@@ -56,9 +53,6 @@ public class ReystaffItem extends Item {
         return InteractionResultHolder.sidedSuccess(stack, level.isClientSide());
     }
 
-    /**
-     * Mojang made this private. Mods use reflection.
-     */
     private static void setWolfCollarColor(Wolf wolf, DyeColor color) {
         try {
             Field field = Wolf.class.getDeclaredField("DATA_COLLAR_COLOR");

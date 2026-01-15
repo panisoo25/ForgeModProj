@@ -24,23 +24,14 @@ public class ModCreativeModeTabs {
                         output.accept(Moditems.RAW_REYTHERITE.get());
                         output.accept(Moditems.MEVERITE.get());
                         output.accept(Moditems.REYSTAFF.get());
+                        output.accept(Moditems.REYLEG.get());
+                        output.accept(Moditems.COOKED_REYLEG.get());
 
                     })
 
                     .build());
 
-//    public static final RegistryObject<CreativeModeTab> REYTHERITE_BLOCKS_TAB = CREATIVE_MODE_TABS.register("reytherite_blocks_tab",
-//            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.REYTHERITE_BLOCK.get()))
-//                    .withTabsBefore(REYTHERITE_ITEMS_TAB.getId())
-//                    .title(Component.translatable("creativetab.examplemod.reytherite_block"))
-//                    .displayItems((itemDisplayParameters, output) -> {
-//                        output.accept(ModBlocks.REYTHERITE_BLOCK.get().asItem());
-//                        output.accept(ModBlocks.RAW_REYTHERITE_BLOCK.get().asItem());
-//                        output.accept(ModBlocks.REYTHERITE_ORE.get().asItem());
-//                        output.accept(ModBlocks.REYTHERITE_DEEPSLATE_ORE.get().asItem());
-//                    })
-//
-//                    .build());
+
 public static final RegistryObject<CreativeModeTab> REYTHERITE_BLOCKS_TAB =
         CREATIVE_MODE_TABS.register("reytherite_blocks_tab",
                 () -> CreativeModeTab.builder()
