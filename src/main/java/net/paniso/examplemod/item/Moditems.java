@@ -1,12 +1,15 @@
 package net.paniso.examplemod.item;
 
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.PickaxeItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.paniso.examplemod.ExampleMod;
 import net.paniso.examplemod.item.custom.ReystaffItem;
+import net.paniso.examplemod.item.custom.ReyckaxeItem;
+import net.paniso.examplemod.item.custom.ReyswordItem;
 
 public class Moditems {
     public static final DeferredRegister<Item> ITEMS =
@@ -27,13 +30,25 @@ public class Moditems {
     public static final RegistryObject<Item> COOKED_REYLEG = ITEMS.register("cooked_reyleg",
             () -> new Item(new Item.Properties().food(ModFoodProperties.COOKED_REYLEG)));
 
-    public static final RegistryObject<Item> REYSTAFF =
-            ITEMS.register("reystaff",
-                    () -> new ReystaffItem(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> REYSTAFF = ITEMS.register("reystaff",
+            () -> new ReystaffItem(new Item.Properties().stacksTo(1)));
+
+    public static final RegistryObject<Item> REYCKAXE = ITEMS.register("reyckaxe",
+            () -> new ReyckaxeItem(ModToolTiers.REY, new Item.Properties()
+                    .stacksTo(1)
+                    .attributes(PickaxeItem.createAttributes(ModToolTiers.REY, 1.0F, -2.8F))));
+
+    public static final RegistryObject<Item> REYSWORD =
+            ITEMS.register("reysword",
+                    () -> new ReyswordItem(
+                            ModToolTiers.REY,
+                            7,        // damage
+                            -2.4f,    // speed (normal sword)
+                            new Item.Properties()
+                    ));
 
 
-    public static void register(IEventBus eventBus)
-    {
+    public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }
 }

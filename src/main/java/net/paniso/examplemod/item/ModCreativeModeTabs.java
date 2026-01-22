@@ -26,6 +26,10 @@ public class ModCreativeModeTabs {
                         output.accept(Moditems.REYSTAFF.get());
                         output.accept(Moditems.REYLEG.get());
                         output.accept(Moditems.COOKED_REYLEG.get());
+                        output.accept(Moditems.REYCKAXE.get());
+                        output.accept(Moditems.REYSWORD.get());
+
+
 
                     })
 

@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "R": {
+      "item": "examplemod:reytherite"
+    },
+    "G": {
+      "item": "minecraft:glowstone"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "RGR",
+    " S ",
+    " S "
+  ],
+  "result": {
+    "id": "examplemod:reystaff",
+    "count": 1
+  }
+}
