@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "R": { "item": "examplemod:reytherite" },
+    "G": { "item": "minecraft:gold_block" },
+    "N": { "item": "minecraft:netherite_block" },
+    "D": { "item":  "minecraft:diamond_block"},
+    "E": { "item":  "minecraft:emerald_block"},
+    "S": { "item":  "minecraft:redstone_block"},
+    "L": { "item":  "minecraft:lapis_block"},
+    "I": { "item":  "minecraft:iron_block"},
+    "C": { "item":  "minecraft:copper_block"}
+  },
+  "pattern": [
+    "EDN",
+    "GSL",
+    "RCI"
+  ],
+  "result": {
+    "id": "examplemod:meverite",
+    "count": 1
+  }
+}

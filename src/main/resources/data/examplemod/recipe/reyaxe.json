@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "R": { "item": "examplemod:reytherite" },
+    "S": { "item": "minecraft:stick" }
+  },
+  "pattern": [
+    "RR ",
+    "RS ",
+    " S "
+  ],
+  "result": {
+    "id": "examplemod:reyaxe",
+    "count": 1
+  }
+}

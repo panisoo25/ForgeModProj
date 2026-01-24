@@ -1,15 +1,15 @@
 package net.paniso.examplemod.item;
 
+import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.PickaxeItem;
+import net.minecraft.world.item.ShovelItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.paniso.examplemod.ExampleMod;
-import net.paniso.examplemod.item.custom.ReystaffItem;
-import net.paniso.examplemod.item.custom.ReyckaxeItem;
-import net.paniso.examplemod.item.custom.ReyswordItem;
+import net.paniso.examplemod.item.custom.*;
 
 public class Moditems {
     public static final DeferredRegister<Item> ITEMS =
@@ -42,10 +42,27 @@ public class Moditems {
             ITEMS.register("reysword",
                     () -> new ReyswordItem(
                             ModToolTiers.REY,
-                            7,        // damage
+                            14,        // damage
                             -2.4f,    // speed (normal sword)
                             new Item.Properties()
                     ));
+
+
+    public static final RegistryObject<Item> REYSHOVEL = ITEMS.register("reyshovel",
+            () -> new ReyshovelItem(ModToolTiers.REY, new Item.Properties()
+                    .stacksTo(1)
+                    // בגרסאות חדשות (1.20.5+) מגדירים Attributes ככה:
+                    .attributes(ShovelItem.createAttributes(ModToolTiers.REY, 1.5F, -3.0F))));
+
+
+    public static final RegistryObject<Item> REYAXE = ITEMS.register("reyaxe",
+            () -> new ReyaxeItem(ModToolTiers.REY, new Item.Properties()
+                    .stacksTo(1)
+                    .attributes(AxeItem.createAttributes(ModToolTiers.REY, 6.0F, -3.1F))));
+
+
+    public static final RegistryObject<Item> REVERSEDSWORD = ITEMS.register("reversedsword",
+            () -> new ReversedswordItem(ModToolTiers.REY, 3, -2.4f, new Item.Properties()));
 
 
     public static void register(IEventBus eventBus) {

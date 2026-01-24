@@ -28,6 +28,9 @@ public class ModCreativeModeTabs {
                         output.accept(Moditems.COOKED_REYLEG.get());
                         output.accept(Moditems.REYCKAXE.get());
                         output.accept(Moditems.REYSWORD.get());
+                        output.accept(Moditems.REYSHOVEL.get());
+                        output.accept(Moditems.REYAXE.get());
+                        output.accept(Moditems.REVERSEDSWORD.get());
 
 
 
