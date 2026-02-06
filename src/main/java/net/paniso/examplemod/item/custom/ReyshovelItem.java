@@ -17,21 +17,16 @@ public class ReyshovelItem extends ShovelItem {
 
     @Override
     public boolean mineBlock(ItemStack stack, Level level, BlockState state, BlockPos pos, LivingEntity entity) {
-        // אנחנו בודקים שאנחנו בצד השרת ושהשחקן הוא שחקן אמיתי
         if (!level.isClientSide && entity instanceof ServerPlayer player) {
-            // רדיוס של 10x10 (5 לכל כיוון מהמרכז)
-            int radius = 4; // 4 לכל צד + הבלוק המרכזי = 9, או 5 לכל צד ל-11. נלך על 4 לדיוק של סביב 10.
+            int radius = 4;
 
-            // לולאה שעוברת על ה-X וה-Z (שטח שטוח)
             for (int x = -radius; x <= radius; x++) {
                 for (int z = -radius; z <= radius; z++) {
-                    // דילוג על הבלוק המקורי (כי הוא כבר נחפר)
                     if (x == 0 && z == 0) continue;
 
                     BlockPos targetPos = pos.offset(x, 0, z);
                     BlockState targetState = level.getBlockState(targetPos);
 
-                    // בדיקה אם הכלי יכול לחפור את הבלוק הזה (שלא יחפור Bedrock בטעות)
                     if (this.isCorrectToolForDrops(stack, targetState)) {
                         level.destroyBlock(targetPos, true, player);
                     }

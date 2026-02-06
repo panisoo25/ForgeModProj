@@ -1,9 +1,6 @@
 package net.paniso.examplemod.item;
 
-import net.minecraft.world.item.AxeItem;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.PickaxeItem;
-import net.minecraft.world.item.ShovelItem;
+import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -51,7 +48,6 @@ public class Moditems {
     public static final RegistryObject<Item> REYSHOVEL = ITEMS.register("reyshovel",
             () -> new ReyshovelItem(ModToolTiers.REY, new Item.Properties()
                     .stacksTo(1)
-                    // בגרסאות חדשות (1.20.5+) מגדירים Attributes ככה:
                     .attributes(ShovelItem.createAttributes(ModToolTiers.REY, 1.5F, -3.0F))));
 
 
@@ -63,6 +59,12 @@ public class Moditems {
 
     public static final RegistryObject<Item> REVERSEDSWORD = ITEMS.register("reversedsword",
             () -> new ReversedswordItem(ModToolTiers.REY, 3, -2.4f, new Item.Properties()));
+
+
+    public static final RegistryObject<Item> ENHANCEDREYCKAXE = ITEMS.register("enhancedreyckaxe",
+            () -> new EnhancedreyckaxeItem(ModToolTiers.REY, new Item.Properties()
+                    .stacksTo(1)
+                    .attributes(PickaxeItem.createAttributes(ModToolTiers.REY, 2.0F, -2.8F))));
 
 
     public static void register(IEventBus eventBus) {

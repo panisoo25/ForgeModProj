@@ -15,13 +15,10 @@ public class ReversedswordItem extends SwordItem {
 
     @Override
     public boolean hurtEnemy(ItemStack stack, LivingEntity target, LivingEntity attacker) {
-        // אנחנו בודקים אם הישות מתה בעקבות המכה
         if (!attacker.level().isClientSide() && target.isDeadOrDying()) {
             ServerLevel level = (ServerLevel) attacker.level();
             EntityType<?> type = target.getType();
 
-            // זימון של שתי ישויות חדשות (אחת שתחליף את המקורית ואחת נוספת לשכפול)
-            // אפשר גם לזמן רק אחת אם אתה רוצה שהמקורית פשוט "תחזור לחיים"
             for (int i = 0; i < 2; i++) {
                 type.spawn(level, target.blockPosition(), MobSpawnType.SPAWN_EGG);
             }

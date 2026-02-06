@@ -31,6 +31,7 @@ public class ModCreativeModeTabs {
                         output.accept(Moditems.REYSHOVEL.get());
                         output.accept(Moditems.REYAXE.get());
                         output.accept(Moditems.REVERSEDSWORD.get());
+                        output.accept(Moditems.ENHANCEDREYCKAXE.get());
 
 
 
